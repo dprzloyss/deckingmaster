@@ -178,44 +178,65 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             color: #5d4037;
         }
         
-        /* Секция наших работ */
-        .products {
-            padding: 80px 0;
-            background-color: #f8f5f0;
-        }
-        
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .product-card {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .product-img {
-            height: 200px;
-            background-color: #d7ccc8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8d6e63;
-            font-size: 18px;
-        }
-        
-        .product-info {
-            padding: 20px;
-        }
-        
-        .product-info h3 {
-            margin-bottom: 10px;
-            color: #5d4037;
-        }
-        
+        /* Стили для портфолио */
+.portfolio {
+    padding: 80px 0;
+    background-color: #f8f5f0;
+}
+
+.portfolio-category {
+    margin-bottom: 50px;
+}
+
+.portfolio-category h3 {
+    color: #5d4037;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-left: 4px solid #8d6e63;
+    padding-left: 15px;
+}
+
+.portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 250px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(93, 64, 55, 0.9));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+}
+      
         /* Секция о компании */
         .about {
             padding: 80px 0;
@@ -393,7 +414,7 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                     <ul>
                         <li><a href="#home">Главная</a></li>
                         <li><a href="#features">Преимущества</a></li>
-                        <li><a href="#products">Продукция</a></li>
+                        <li><a href="#portfolio">Наши работы</a></li>
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#contact">Контакты</a></li>
                     </ul>
@@ -652,5 +673,6 @@ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 </html>
 
 `
+
 
 
